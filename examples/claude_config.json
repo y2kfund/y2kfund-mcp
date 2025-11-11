@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "y2kfund": {
+      "command": "uvx",
+      "args": [
+        "--from",
+        "git+https://github.com/y2kfund/y2kfund-mcp",
+        "y2kfund-mcp"
+      ]
+    }
+  }
+}

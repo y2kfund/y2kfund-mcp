@@ -1,0 +1,36 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "y2kfund-mcp"
+version = "1.0.0"
+description = "MCP server for querying Y2K Fund trading data (positions, options, prices)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "Y2K Fund", email = "info@y2k.fund"}
+]
+keywords = ["mcp", "trading", "positions", "stocks", "options"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+dependencies = [
+    "mcp>=0.9.0",
+    "httpx>=0.27.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/y2kfund/y2kfund-mcp"
+Repository = "https://github.com/y2kfund/y2kfund-mcp"
+Issues = "https://github.com/y2kfund/y2kfund-mcp/issues"
+
+[project.scripts]
+y2kfund-mcp = "y2kfund_mcp.server:main"
