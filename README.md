@@ -12,7 +12,6 @@ Model Context Protocol (MCP) server for querying Y2K Fund trading data directly 
 - **`get_positions`** - Query latest stock positions by symbol
   - Returns quantity, market value, unrealized P&L, average cost
   - Shows data across all accounts with legal entity information
-  - Supports user-specific account aliases
 
 ### Coming Soon
 
@@ -96,7 +95,6 @@ Once installed, you can ask Claude natural language questions:
 "Get my MSFT positions"
 "Show positions for META"
 "What are my AAPL holdings?"
-"Get GOOG positions for user abc123"
 ```
 
 **Analyze Positions:**
@@ -104,12 +102,6 @@ Once installed, you can ask Claude natural language questions:
 "Show me all my TSLA positions and calculate the total P&L"
 "Compare my MSFT and GOOG positions"
 "What's my biggest position loss?"
-```
-
-**Multi-step Analysis:**
-```
-"Get NVDA positions, then calculate what percentage of total portfolio value they represent"
-"Show META positions and tell me if I should rebalance"
 ```
 
 ## Tool Reference
@@ -123,7 +115,6 @@ Get latest stock positions by symbol from Y2K Fund accounts.
 | Parameter | Type | Required | Description |
 |-----------|------|----------|-------------|
 | `symbol` | string | Yes | Stock ticker symbol (e.g., MSFT, META, AAPL) |
-| `user_id` | string | No | User ID for account alias filtering |
 
 **Example Response:**
 
